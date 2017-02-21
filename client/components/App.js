@@ -1,6 +1,7 @@
 import React from 'react'
 import NavigationBar from './NavigationBar'
 
+//con this.props.children hago la llamada que necesito para X hijo
 class App extends React.Component {
     render(){
         return(

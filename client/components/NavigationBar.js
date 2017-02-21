@@ -10,7 +10,8 @@ export default () => {
                 </div>
                 <div className="collapse navbar-collapse">
                     <ul className="nav navbar-nav navbar-right">
-                        <li href="#"> <Link to="/signup">Iniciar Sesion</Link> </li>
+                        {/*<li href="#"> <Link to="/signup">Formulario</Link> </li>*/}
+                        <li href="#"> <Link to="/login">Ingresar</Link> </li>
                     </ul>
                 </div>
             </div>
