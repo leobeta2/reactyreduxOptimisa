@@ -8,7 +8,7 @@ class LoginForm extends React.Component {
          this.state = {
              username: '',
              password: '',
-             status: 0
+             //status: 0
          }
 
          this.onChange = this.onChange.bind(this);
@@ -30,13 +30,19 @@ class LoginForm extends React.Component {
         //     .catch(function (error) {
         //         console.log(error);
         //     });
-         axios.post('/api/users', { user:this.state })
+         axios.post('http://sample-env-1.3aqqens45r.us-west-2.elasticbeanstalk.com/api/login', { username:this.state.username, password:this.state.password })
+         //axios.post('http://sample-env-1.3aqqens45r.us-west-2.elasticbeanstalk.com/api/login', { username:"fmartinez", password:"fmartinez" })
             .then(function (response){
                 console.log(response);
             })
             .catch(function (error) {
-                console.log(error);
+                
+             let a = Object.assign({}, error)
+             console.log(a.response.data)
+             
             });
+
+            
      }
 
     render() {
