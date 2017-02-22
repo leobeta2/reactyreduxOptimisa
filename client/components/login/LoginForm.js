@@ -42,7 +42,7 @@ class LoginForm extends React.Component {
     render() {
         return (
             <form onSubmit={this.onSubmit}>
-                <h1>Unete a nuestra comunidad!!</h1>
+                <h1>Ingresa a nuestra comunidad Optimisa!!</h1>
                 <div className="form-group">
                     <label className="control-label">Usuario</label>
                     <input 
