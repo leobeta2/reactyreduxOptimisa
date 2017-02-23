@@ -21,6 +21,7 @@ class LoginForm extends React.Component {
      }
 
      onSubmit(e) {
+         const conexion = false;
          e.preventDefault();
          //peticion a una api con libreria axios(Crud)..., simplifica la vida ya que genera el objeto como json
         //  axios.get('/api/usuario', {user: this.state})
@@ -34,9 +35,14 @@ class LoginForm extends React.Component {
          //axios.post('http://sample-env-1.3aqqens45r.us-west-2.elasticbeanstalk.com/api/login', { username:"fmartinez", password:"fmartinez" })
             .then(function (response){
                 console.log(response);
+                console.log(response.statusText);
+                if (response.statusText== 'OK'){
+                    Console.log('Perfecto!!')
+                };
             })
             .catch(function (error) {
-                
+
+             //lectura del error   
              let a = Object.assign({}, error)
              console.log(a.response.data)
              
